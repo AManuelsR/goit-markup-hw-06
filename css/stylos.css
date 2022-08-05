@@ -1,0 +1,710 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 1600px;
+        text-align: center;
+              
+    }
+
+/*----configuracion de encabezado------*/
+
+.contenedor-encabezado{
+    margin: 0 auto;
+}
+
+
+header{
+    width: 1200px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    width: 145px;
+    height: 31px;
+    color: #2196F3;
+    font-size: 26px;
+    font-family: 'Raleway';
+    font-weight: bold;
+    
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black
+ }
+
+ a:hover{
+    
+    border-bottom: 2px solid #2196F3;
+    color: #2196F3;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+h1:hover, 
+h2:hover,
+h3:hover,
+h4:hover,
+p:hover{
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #2196F3;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*----configuracion banner----*/
+
+ .contenedor-banner{
+    width: 1600px;
+    height: 600px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.text-banner{
+    color: white;
+    font-size: 44px;
+    width: 650px;
+    text-align: center;    
+}
+
+.boton-modal{
+    padding-top: 12px;
+    background: #2196F3;
+    color: #FFFFFF;
+    border-radius: 4px;
+    width: 210px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+.boton-modal label{
+    
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+#btn-modal{
+    display: none;
+}
+
+/*---configuracion Modal---*/
+
+.container-modal{
+    border: solid 3px red;
+    width: 1600px;
+    height: 1024px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#btn-modal:checked ~ .container-modal{
+    visibility: visible;
+    opacity: 1;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content-modal{
+    width: 528px;
+    height: 581px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.content-modal:hover{
+    border: 2px solid #185e83;
+    border-radius: 4px;
+}
+
+.content-modal .btn-cerrar{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+    padding-top: 8px;
+    margin-left: 490px;
+    border-radius: 50%;    
+}
+
+.content-modal .btn-cerrar:hover{
+    border: 1px solid #185e83;
+}
+
+.content-modal .btn-cerrar label{
+    position: absolute;
+    color: #000000;
+    margin-top: -3px;
+    margin-left: -4px;
+    cursor: pointer;
+    
+}
+
+
+/*----configuracion valores----*/
+
+.contenedor-valores{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.values-container{
+    width: 270px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    overflow: hidden;    
+}
+
+.atencion{
+    width: 260 px;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.atencion:hover{
+    border: solid 1px #2196F3;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.atencion-1-1:hover{    
+    fill: #2196F3;
+    stroke: blue; 
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.values-container p{
+    text-align: justify;
+}
+
+.values-container:hover p{
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #2196F3;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/*----configuracion servicios----*/
+
+.contenedor-servicios{     
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;  
+}
+
+.servicios{
+    display: inline-block;
+    position: relative;  
+}
+
+.servicio-texto{
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+    top: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;    
+}
+
+.servicios:hover,
+.servicio-texto:hover{
+    border: solid 3px #2196F3;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/*----configuracion sequipo----*/
+
+.contenedor-equipo{
+    overflow: hidden;
+    width: 1600px;
+    height: 708px;
+    margin: 0 auto;
+    text-align: center;
+    background: #F5F4FA;
+}
+
+.work-team{
+    margin: 5px;
+    display: inline-block;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    place-items: center;
+    width: 270px;
+    height: 428px;
+    overflow: hidden;
+}
+
+.work-team img{
+    width: 270px;
+    height: 260px;
+}
+
+.work-team:hover,
+.nuestra-img:hover,
+.port-group:hover,
+.grupo-img:hover{
+    border: solid 3px #2196F3;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*--configuracion Redes sociales--*/
+
+.redes-sociales ul li{
+    
+    width: 44px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes-sociales ul li i{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.redes-sociales ul li:hover{
+    background: #2196F3;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.redes-sociales ul li i:hover{
+    color: #FFFFFF;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*--configuracion clientes--*/
+
+.contenedor-clientes{
+    
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;    
+}
+
+.contenedor-clientes h3,
+.nuestro,
+.contenedor-servicios h2 {
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0.03em;   
+}
+
+.clientes{
+    
+    width: 180px;
+    height: 81px;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 4px;   
+}
+
+/*-----configuracion clientes-----*/
+
+.cliente-1:hover{
+    border: solid 1px blue;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cliente-1-1:hover{    
+    fill: #2196F3;
+    stroke: blue;
+    background: white;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*--configuracion del portafolio--*/
+
+.contenedor-portafolio{    
+    border: 0;
+    padding: 0;    
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu{
+    
+    text-align: center;
+       
+}
+
+.menu-button{
+    text-align: center;
+    width: 150px;
+    height: 38px;
+    padding: 10px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.portafolio-estudio{
+    padding: 0;
+    
+}
+
+figure{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.port-group{
+    width: 370px;
+    height: 404px;
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+    margin: 10px;
+    position: relative;    
+    display: inline-block;    
+}
+
+.port-group .grupo-img{    
+    width: 100%;
+    height: 294px;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.port-group .port-grupo__texto{
+    position: absolute;
+    width: 100%;
+    height: 294px;
+    background: rgba(33, 150, 243, 0.9);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    font-weight: 400;
+    text-align: justify;
+    font-size: 18px;
+
+    margin: 0 auto;
+    display: table;
+
+}
+
+.port-group .port-grupo__texto p{
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    
+}
+
+.port-group .port-grupo__texto:hover{
+    opacity: 1;
+    transform: translatey(0);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);    
+}
+
+/*--configuracion pagina contacto--*/
+
+.formulario{
+    text-align: justify;
+    
+    width: 1600px;
+    height: 1024px;
+    background: rgba(0, 0, 0, 0.2); 
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+       
+}
+
+.formulario-contacto{
+    
+    width: 528px;
+    height: 581px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding-left: 40px;
+    margin: 0 auto;
+    text-align: center;
+    display:table;
+    justify-content: center;
+    align-items: center;
+       
+}
+
+.formulario__cierre{
+    position: absolute;
+    margin-top: 5px;
+    left: 1000px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    
+}
+
+
+.formulario-contacto__texto{
+    
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: justify;
+    letter-spacing: 0.03em;
+    color: #212121;    
+}
+
+.formulario-contacto__registro{
+    
+    width: 448px;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    position: relative;
+    padding-left: 10px;
+    
+}
+
+.formulario__icono{
+    position: absolute;    
+    margin-top: 32px;
+    margin-left: 15px;
+
+}
+
+.formulario-contacto__dato{
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding-left: 35px;
+
+}
+
+.formulario-contacto:hover,
+.formulario__cierre:hover,
+.formulario-contacto__dato:hover{
+    border: solid 1px #2196F3;
+}
+
+.formulario-contacto__verificacion{
+   padding-top: 10px;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.formulario-contacto__seleccion:hover{
+    fill: #2196F3;
+}
+
+.formulario__verificacion{
+    width: 400px;    
+    text-align: justify;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.btn-enviar{
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.btn-enviar:hover{
+    background: #2196F3;
+    color: #FFFFFF;
+}
+
+
+/*--configuracion pie de pagina--*/
+
+footer{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    
+    width: 1600px;
+    background: #2F303A;
+    
+}
+
+.contenedor-final{
+    width: 1200px;  
+    margin: 0 auto;
+    box-sizing: border-box;    
+    display: flex; 
+}
+
+.direccion-final{    
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    justify-content: left;
+    
+    padding: 10px;
+}
+
+.direccion{
+    margin-left: 20px;
+    width: 231px;
+    text-align: justify;
+}
+
+/*---configuracion red social---*/
+
+.red-social-final{
+    width: 220px;
+    margin-left: 10px;
+    text-align: center;  
+}
+
+.icon{
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.red-social-texto{
+    
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.red-social-final .icon .icono-red{
+    color: #fff;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    display: block;    
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+}
+
+.icon:hover span i{
+    color: #fff;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 25px;
+       
+} 
+
+.icon:hover .icono-red{
+    color: #fff;
+    background: #2196F3;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/*---Configuracion boletin---*/
+
+.boletin{
+    width: 600px;
+    padding-left: 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.correo{
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    font-size: 16px;
+    padding-left: 20px;
+    letter-spacing: 0.03em;
+}
+
+.enviar-correo{
+    margin-left: 12px;
+    width: 200px;
+    height: 50px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+}
+
+.enviar-correo:hover{
+    border: 1px solid #2196F3;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));    
+}
+
+.enviar-correo:hover{
+    stroke: #2196F3;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
