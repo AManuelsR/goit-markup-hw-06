@@ -97,78 +97,13 @@ p:hover{
     text-align: center;
 }
 
-.boton-modal label{
+.boton-modal{
     
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
     transition: all 300ms ease;
 }
-
-#btn-modal{
-    display: none;
-}
-
-/*---configuracion Modal---*/
-
-.container-modal{
-    border: solid 3px red;
-    width: 1600px;
-    height: 1024px;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    visibility: hidden;
-    opacity: 0;
-}
-
-#btn-modal:checked ~ .container-modal{
-    visibility: visible;
-    opacity: 1;
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.content-modal{
-    width: 528px;
-    height: 581px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-}
-
-.content-modal:hover{
-    border: 2px solid #185e83;
-    border-radius: 4px;
-}
-
-.content-modal .btn-cerrar{
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    width: 30px;
-    height: 30px;
-    margin-top: 8px;
-    padding-top: 8px;
-    margin-left: 490px;
-    border-radius: 50%;    
-}
-
-.content-modal .btn-cerrar:hover{
-    border: 1px solid #185e83;
-}
-
-.content-modal .btn-cerrar label{
-    position: absolute;
-    color: #000000;
-    margin-top: -3px;
-    margin-left: -4px;
-    cursor: pointer;
-    
-}
-
 
 /*----configuracion valores----*/
 
@@ -241,6 +176,7 @@ p:hover{
 .servicio-texto{
     width: 370px;
     height: 70px;
+    
     background: rgba(47, 48, 58, 0.8);
     color: #FFFFFF;
     letter-spacing: 0.03em;
@@ -304,13 +240,19 @@ p:hover{
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
+}
+
+.redes-sociales ul li a{
+    padding: 0;
+    margin: 0;
 }
 
 .redes-sociales ul li i{
+    
     font-size: 20px;
     line-height: 40px;
+    text-align: center;
 }
 
 .redes-sociales ul li:hover{
@@ -390,6 +332,11 @@ p:hover{
     font-size: 16px;
     color: black;
     font-weight: bold;
+}
+
+.menu-button:hover{
+    background: #2196F3;
+    color: #fff;
 }
 
 .portafolio-estudio{
